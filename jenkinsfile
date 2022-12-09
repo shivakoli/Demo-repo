@@ -1,16 +1,22 @@
+
 pipeline {
     agent {
-        node {
-            label 'built-in'
-            customWorkspace '/mnt/jenkins'
-        }
-    }
-	stages {
-        stage('new_folder') {
+		node {
+			label "built-in"
+		}
+	}
+
+    stages {
+        stage('Hello') {
             steps {
-                sh 'mkdir Dee'
+                echo 'Hello shashu'
             }
         }
-		
+		stage('Bye') {
+            steps {
+                echo 'Bye shashu'
+				
+            }
+        }
     }
 }
