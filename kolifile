@@ -1,0 +1,21 @@
+pipeline {
+    agent {
+		node {
+			label "built-in"
+		}
+	}
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello shashu'
+            }
+        }
+		stage('Bye') {
+            steps {
+                echo 'Bye shashu'
+				
+            }
+        }
+    }
+}
